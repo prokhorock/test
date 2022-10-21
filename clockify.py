@@ -45,9 +45,10 @@ try:
     inputName.clear()
     if oldName == newName:
         newName = random.choice(nameList)
+        inputName.send_keys(newName)
+        browser.find_element(By.TAG_NAME, "body").click()
     else:
         inputName.send_keys(newName)
-    #newName = inputName.get_attribute("value")
         browser.find_element(By.TAG_NAME, "body").click()
     
      
